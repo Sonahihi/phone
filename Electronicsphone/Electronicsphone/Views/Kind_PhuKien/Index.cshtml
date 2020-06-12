@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Electronicsphone.Models.Kind_PhuKien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kind_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kind_Phukien_Image)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kind_Name)
+        </td>
+        <td>
+            <img src="@item.Kind_Phukien_Image" width="120px")
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_Kind }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_Kind }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_Kind })
+        </td>
+    </tr>
+}
+
+</table>

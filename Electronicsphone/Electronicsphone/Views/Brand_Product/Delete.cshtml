@@ -1,0 +1,43 @@
+﻿@model Electronicsphone.Models.Brand_Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Brand_Product</h4>
+    <hr />
+	<dl class="dl-horizontal">
+		<dt>
+			@Html.DisplayNameFor(model => model.TenNhaSX)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.TenNhaSX)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.HinhNhaSX)
+		</dt>
+
+		<dd>
+		<dd>
+			<img src="@Model.HinhNhaSX" width="120px" />
+		</dd>
+		</dd>
+
+	</dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

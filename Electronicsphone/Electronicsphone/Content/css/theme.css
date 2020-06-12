@@ -1,0 +1,25 @@
+.ruler {
+    width: auto;
+    height: 80px;
+    background: yellow;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.active {
+    float: left;
+    margin-right: 70px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.active li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.active a:link {
+    text-decoration: none;
+}

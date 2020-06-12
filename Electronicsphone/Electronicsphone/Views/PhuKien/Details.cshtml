@@ -1,0 +1,92 @@
+﻿@model Electronicsphone.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:red">Chi tiết</h2>
+
+<div>
+    <h4>Phụ kiện</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tensp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+			<img src="@Model.HinhAnh" alt="Image" width="120" />
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrongLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrongLuong)
+        </dd>
+
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KetNoiCungLuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KetNoiCungLuc)
+        </dd>
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSuDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSuDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSac)
+        </dd>
+
+       
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Masp }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,116 @@
+﻿@model Electronicsphone.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:red">Chi tiết sản phẩm</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tensp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+           <img src="@Model.HinhAnh" width="120px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manhinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manhinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeDieuHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeDieuHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CardManHinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CardManHinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CongKetNoi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CongKetNoi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OCung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OCung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KichThuoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KichThuoc)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Masp }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

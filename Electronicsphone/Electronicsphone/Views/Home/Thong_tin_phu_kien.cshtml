@@ -1,0 +1,117 @@
+﻿@model Electronicsphone.Models.Product
+@{
+	ViewBag.Title = "Thong_tin_phu_kien";
+	Layout = "~/Views/Shared/_ChitietPhone.cshtml";
+}
+
+<div class="DetailProduct">
+
+	<div class="DetailProduct01">
+		<h4> @Model.Tensp</h4>
+	</div>
+
+</div>
+<div class="DetailProduct02">
+	<div class="DetailProduct03">
+		<div class="DetailProduct13">
+			<img src="@Model.HinhAnh">
+		</div>
+		<div class="DetailProduct23">
+
+		</div>
+
+	</div>
+	<div class="DetailProduct03">
+		<table class="DetailProduct04">
+			<tr>
+				<td>
+					<p class="PriceDetail">@String.Format("{0:0,0}", Model.Gia) đ</p>
+				</td>
+
+				<td>
+					<p class="Tragop">Trả góp 0%</p>
+				</td>
+		</table>
+
+
+		<div class="DetailProduct07">
+			<div class="DetailProduct17">
+				<h5>Khuyến mãi</h5>
+			</div>
+			<div class="DetailProduct27">
+				<ul>
+					<li>Giảm thêm 3% (240.000₫) cho khách mua online có sinh nhật trong tháng</li>
+					<li>Giảm ngay 1 triệu (áp dụng cho đơn hàng đặt và nhận hàng trong ngày 27 - 31/10) (đã trừ vào giá)</li>
+				</ul>
+			</div>
+			<div class="DetailProduct37">
+				<div class="DetailProduct47">
+					<p>Mua online tặng thêm quà</p>
+					<div class="DetailProduct57">
+						<ul>
+							<li>Giảm ngay 700.000đ (áp dụng cho đơn hàng đặt và nhận hàng trong ngày 26/10 - 4/11) (đã trừ vào giá)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="DetailProduct08">
+			<a href="@Url.Action("ThemHang","ShoppingCart",new { @IMaSP=Model.Masp,@chuoi=Request.Url.ToString()})">
+				<div class="DetailProduct18">
+					<p>MUA NGAY<br>Giao tận nơi hoặc nhận tại siêu thị</p>
+				</div>
+			</a>
+
+			<div class="DetailProduct28">
+				<a href="#">
+					<p>TRẢ GÓP QUA THẺ<br>Visa, Master, JCB</p>
+				</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="DetailProduct09">
+
+		<div class="DetailProduct29">
+			<p class="DetailProduct39">ElectronicsPhone cam kết:</p>
+			<ul>
+				<li>Hàng chính hãng</li>
+				<li>Bảo hành 24 Tháng chính hãng</li>
+				<li>Giao hàng miễn phí toàn quốc trong 60 phút</li>
+				<li>Bảo hành nhanh tại ElectronicsPhone trên toàn quốc</li>
+			</ul>
+		</div>
+		<div class="DetailProduct29">
+			<p class="DetailProduct39">Thông số kỹ thuật</p>
+			<table style="width: 100%;margin-left:10px">
+				<tr>
+					<td>
+						Trọng lượng:
+					</td>
+					<td>@Model.TrongLuong</td>
+				</tr>
+				<tr>
+					<td>Kết nối cùng lúc:</td>
+					<td>@Model.KetNoiCungLuc</td>
+				</tr>
+				<tr>
+					<td>Cách kết nối:</td>
+					<td>@Model.CachKetNoi</td>
+				</tr>
+				<tr>
+					<td>Thời gian sử dụng:</td>
+					<td>@Model.TimeSuDung</td>
+				</tr>
+				<tr>
+					<td>Thời gian sạc:</td>
+					<td>@Model.TimeSac</td>
+				</tr>
+
+			</table>
+		</div>
+
+
+	</div>
+	
+</div>
+

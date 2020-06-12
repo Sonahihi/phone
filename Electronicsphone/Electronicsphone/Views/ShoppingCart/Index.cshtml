@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Electronicsphone.Models.Order>
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 style="text-align:center;margin-bottom:30px;color:red">Danh sách đơn hàng</h2>
+<h2>@Html.ActionLink("Khách hàng","Index","ApplicationUsers")</h2>
+
+<table class="table">
+	<tr>
+		<th>
+			Tên khách hàng
+		</th>
+		<th>
+			Số điện thoại
+		</th>
+		<th>
+			Tổng tiền
+		</th>
+		<th>
+			Địa chỉ
+		</th>
+		<th>
+			Status
+		</th>
+		<th>
+			Ngày đặt hàng
+		</th>
+
+		<th>
+			Ngày nhận hàng
+		</th>
+		<th>
+			Cập nhật đơn hàng
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+<tr>
+	<td>
+		@Html.DisplayFor(modelItem => item.TenKhachHang)
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.SDT)
+	</td>
+	<td>
+		@String.Format("{0:0,0}", item.TongTien) VND
+	</td>
+	<td>
+		@Html.DisplayFor(modelItem => item.DiaChi)
+	</td>
+
+	<td>
+		@Html.DisplayFor(modelItem => item.MoTa)
+
+	</td>
+
+	<td>
+		@String.Format("{0:MM/dd/yyyy}", item.NgayDatHang)
+	</td>
+
+	<td>
+		@String.Format("{0:MM/dd/yyyy}", item.NgayNhanHang)
+	</td>
+	<td>
+	@using (Html.BeginForm("DetailStatus", "ShoppingCart", new { id = item.Id }))
+	{
+		<div class="form-group">
+
+			<div class="col-md-10">
+				@Html.DropDownList("Gender", new List<SelectListItem>
+				{
+				new SelectListItem { Text = "Chưa xử lý", Value="Chưa xử lý" },
+				new SelectListItem { Text = "Đang xử lý", Value="Đang xử lý" },
+				new SelectListItem { Text = "Đã xử lý", Value="Đã xử lý" }
+				}, new { @class = "form-control" })
+				@Html.ValidationMessageFor(model => item.MoTa, "", new { @class = "text-danger" })
+				<input type="submit" value="Cập nhật" />
+			</div>
+		</div>
+	}
+	</td>
+
+	<td>
+		@Html.ActionLink("Chi tiết", "ChiTietDatHang", new { id = item.Id })
+	</td>
+
+</tr>
+	}
+
+</table>
+

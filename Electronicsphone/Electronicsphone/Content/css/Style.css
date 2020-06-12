@@ -1,0 +1,1219 @@
+header {
+    background: #E4E4E4;
+}
+
+#top-header {
+    overflow: hidden;
+    margin: 0px;
+}
+
+#top-header img {
+    float: left;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.active {
+    list-style-type: none;
+    float: right;
+    margin-right: 20px;
+    margin-top: 0px;
+    margin-left:10px;
+    margin-bottom:0px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.active li {
+    display: inline-block;
+}
+
+.active li a {
+    text-decoration: none;
+    color: #4E4747;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.active li :hover {
+    color: currentColor;
+    border: 1px solid #E4E4E4;
+    background-color: #E4E4E4;
+}
+
+.slider-holder {
+    width: 800px;
+    height: 300px;
+    background-color: yellow;
+    margin-left: 80px;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-holder {
+    width: 2400px;
+    background-color: red;
+    height: 300px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slider-image {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#slider-image-1:target~.image-holder {
+    left: 0px;
+}
+
+#slider-image-2:target~.image-holder {
+    left: -800px;
+}
+
+#slider-image-3:target~.image-holder {
+    left: -1600px;
+}
+
+.button-holder {
+    position: relative;
+    top: -20px;
+}
+
+.slider-change {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: brown;
+}
+
+.line .line1 {
+    list-style-type: none;
+}
+
+.line .line1 {
+    list-style-type: none;
+    float: right;
+}
+
+.line .line1 li {
+    padding: 3px;
+}
+
+.line2 {
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.line2 img {
+    width: 1200px;
+    height: 75px;
+}
+
+.khuyenmai {
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-top: 10px;
+    background: white;
+    height: 500px;
+}
+
+.khuyenmai b {
+    text-transform: uppercase;
+    font-size: 120%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.khuyenmai1 {
+    max-width: 250px;
+    margin-left: 20px;
+    text-align: left;
+    float: left;
+}
+
+.khuyenmai1 img {
+    height: 250px;
+    width: 100px;
+}
+
+.khuyenmai1 img:hover {
+    transform: scale(1.05);
+}
+
+.khuyenmai1 h5 {
+    font-size: 15px;
+}
+
+.price {
+    color: red;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.ctrl {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.ctrl-btn {
+    padding: 20px 20px;
+    min-width: 30px;
+    background: #fff;
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 100%;
+    margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+    left: 80px;
+    border-top: 1px solid #E3E3E3;
+    border-right: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.ctrl-btn.pro-next {
+    right: 70px;
+    border-top: 1px solid #E3E3E3;
+    border-left: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.phonehot {
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-top: 10px;
+    background: white;
+    max-height: 500px;
+}
+
+.phonehot b {
+    text-transform: uppercase;
+    font-size: 120%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+#phonehot1 td {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 15px;
+}
+
+#phonehot1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.Laptophot {
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-top: 10px;
+    background: white;
+    max-height: 100%;
+}
+
+.Laptophot b {
+    text-transform: uppercase;
+    font-size: 120%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+#Laptophot1 td {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 15px;
+}
+
+#Laptophot1 .Laptophot3 {
+    width: 600px;
+    max-height: 100%;
+}
+
+.Laptophot2 {
+    max-width: 400px;
+    margin-left: 20px;
+    float: left;
+    margin-top: 0;
+}
+
+.Laptophot2 h5 {
+    font-size: 15px;
+}
+
+.Laptophot2 img {
+    height: 250px;
+    width: 500px;
+}
+
+.Laptop4 img {
+    height: 180px;
+    width: 100px;
+}
+
+.Laptop4 h5 {
+    font-size: 15px;
+}
+
+.Laptop4 {
+    width: 250px;
+    margin-left: 10px;
+    text-align: left;
+    float: left;
+}
+
+.Phukien {
+    margin-left: 80px;
+    margin-right: 70px;
+    margin-top: 10px;
+    background: white;
+    max-height: 500px;
+}
+
+.Phukien b {
+    text-transform: uppercase;
+    font-size: 120%;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.Phukien3 img {
+    height: 180px;
+    width: 200px;
+    margin: 10px;
+}
+
+.Phukien2 {
+    max-width: 250px;
+    height: 280px;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.Phukien2 h5 {
+    font-size: 15px;
+}
+
+.Phukien3 {
+    height: 200px;
+    width: 220px;
+}
+
+#Phukien1 td {
+    padding: 15px;
+}
+
+footer {
+    background: white;
+    max-height: 300px;
+}
+
+.footer_1 {
+    margin-top: 10px;
+    max-height: 200px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.footer_3 {
+    margin: 30px 60px 80px 0px;
+    color: dodgerblue;
+}
+
+.footer_3 p:hover {
+    color: darkgrey;
+}
+
+.footer_4 {
+    margin: 30px 30px 80px 0px;
+    color: dodgerblue;
+}
+
+.footer_4 p:hover {
+    color: darkgrey;
+}
+
+.footer_5 {
+    margin: 30px 80px 80px;
+    color: dimgray;
+    line-height: 2.3;
+}
+
+.footer_7 {
+    color: black;
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+
+.detail {
+    font-size: 10.48px;
+    text-align: center;
+    background: white;
+    margin-bottom: 0px;
+    max-height: 50px;
+}
+
+#comingsoon img {
+    max-width: 1190px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.middle {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 15px;
+    color: darkgray;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds,
+.left {
+    display: inline-block;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds,
+.left {
+    color: white;
+}
+
+.days {
+    background: black;
+}
+
+.hours {
+    background: #FF3E41;
+}
+
+.minutes {
+    background: #FFB20C;
+}
+
+.seconds {
+    background: #2186FF;
+}
+
+.left {
+    background: #E10A0A;
+}
+
+.c-number {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-size: 3em;
+}
+
+.logoBranch {
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.logoBranch img {
+    width: 150px;
+}
+
+.logoBranch .Add {
+    width: 130px;
+    text-align: center;
+    background: #FFFCFC;
+}
+
+.logoBranch tr td {
+    border: 1px solid #ddd;
+}
+
+.Array {
+    margin: 10px 80px 0px 80px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    max-width: 1200px;
+}
+
+.Array .Array1 {
+    height: 50px;
+}
+
+.Array1 tr td {
+    width: 140px;
+}
+
+#IDPhone td {
+    border: 1px solid #ddd;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.slider-holder1 {
+    width: 800px;
+    height: 170px;
+    background-color: yellow;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-holder1 {
+    width: 3000px;
+    background-color: red;
+    height: 160px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slider-image {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#slider-image-1:target~.image-holder1 {
+    left: 0px;
+}
+
+#slider-image-2:target~.image-holder1 {
+    left: -800px;
+}
+
+#slider-image-3:target~.image-holder1 {
+    left: -1600px;
+}
+
+.button-holder1 {
+    position: relative;
+    top: -25px;
+}
+
+.slider-change {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 10px;
+    background-color: orange;
+}
+
+.Show {
+    margin-left: 80px;
+    margin-top: 0px;
+    margin-right: 80px;
+}
+
+.Show .Show1 {
+    float: right;
+    top: 68px;
+    left: 885px;
+    margin-right: 10px;
+    position: absolute;
+}
+
+.ShowDetail img {
+    padding: 3.9px;
+}
+
+.logoBranchLaptop {
+    margin: 10px 80px 0px 80px;
+    width: 1200px;
+}
+
+.logoBranchLaptop tr td {
+    width: 200px;
+    background: white;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.PriceLaptop {
+    margin: 10px 80px 0px 80px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    width: 1200px;
+}
+
+.priceLaptop1 {
+    height: 50px;
+}
+
+.priceLaptop1 tr td {
+    width: 150px;
+    text-align: center;
+}
+
+.Slider .Slider1 {
+    float: right;
+    top: 82px;
+    left: 888px;
+    margin-right: 80px;
+    position: absolute;
+}
+
+.Line {
+    margin-top: 10px;
+    margin-left: 80px;
+    width: 1200px;
+    height: 75px;
+    background: yellow;
+}
+
+.SliderDetail img {
+    width: 390px;
+    height: 100px;
+}
+
+.ColorPrice {
+    border: 1px solid #ddd;
+    background: red;
+}
+
+.ColorPrice:hover {
+    background: #ddd;
+}
+
+.Ask {
+    margin: 10px 80px 0 80px;
+}
+
+.AskDetail img {
+    width: 200px;
+    height: 140px;
+    margin-top: 10px;
+}
+
+.AskDetail {
+    background: white;
+    width: 238px;
+    height: 160px;
+    text-align: center;
+}
+
+.ProductLapTop {
+    margin: 10px 70px 0 80px;
+    max-width: 1200px;
+    height: 700px;
+    background: white;
+}
+
+.price2 {
+    color: red;
+    font-size: 18px;
+}
+
+.ProductLaptop1 {
+    max-width: 300px;
+    max-height: 350px;
+    background: white;
+    border: 1px solid red;
+    float: left;
+}
+
+.ProductLaptop2 {
+    width: 297.7px;
+    height: 250px;
+    background: white;
+    text-align: center;
+}
+
+.ProductLaptop2 img {
+    width: 225px;
+    height: 180px;
+    margin: 20px 10px 20px 10px;
+}
+
+.ProductLaptop2 img:hover {
+    transform: scale(1.03);
+}
+
+.ProductLaptop3 {
+    width: 290px;
+    height: 100px;
+    
+}
+
+.ProductLaptop3 p {
+    line-height: 1.0;
+    color: red;
+    margin-left: 10px;
+}
+
+.ProductLaptop3 h5 {
+    margin-left: 10px;
+    font-size:18px;
+}
+
+.ProductPhone {
+    margin: 10px 80px 0px 80px;
+    max-width: 1200px;
+    height:1050px;
+    background: white;
+}
+
+.ProductPhone1 {
+    max-width: 237.8px;
+    height: 350px;
+    background: white;
+    border: 1px solid red;
+    float: left;
+}
+
+.ProductPhone2 {
+    width: 200px;
+    height: 220px;
+    background: white;
+    margin: 20px;
+}
+
+.ProductPhone2 img {
+    width: 190px;
+    height: 200px;
+    padding: 5px;
+    margin: 15px 5px 5px;
+}
+
+.ProductPhone3 p {
+    line-height: 1.0;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.ProductPhone3 h6 {
+    margin-left: 10px;
+    color: #004d99;
+}
+
+.ProductPhone3 .price1 {
+    color: red;
+    font-size: 15px;
+}
+
+.ProductPhone04 {
+    width: 230px;
+    height: 70px;
+    background: red;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ProductPhone2 img:hover {
+    transform: scale(1.05);
+}
+
+.Shipper {
+    background: #e6ffe6;
+    margin-top: 10px;
+}
+
+.Shipper .Shipper3 {
+    border: 2px solid #ccffcc;
+    width: 240px;
+    text-align: center;
+}
+
+.Shipper .Shipper1 {
+    border: 2px solid #ccffcc;
+    width: 320px;
+}
+
+.ShipperDetail1 {
+    margin-left: 80px;
+}
+
+.Shipper .Shipper2 {
+    border: 2px solid #ccffcc;
+    width: 320px;
+}
+
+.ShipperDetail2 {
+    margin-left: 20px;
+}
+
+.ColorPrice1 {
+    border: 1px solid #ddd;
+    background: red;
+}
+
+.ArrangeLaptop {
+    background: red;
+    width: 150px;
+}
+
+.ColorPrice1:hover {
+    background: #ddd;
+}
+
+.Array .Array1 {
+    text-align: center;
+}
+
+.LogoPhukien {
+    width: 1200px;
+    height: 160px;
+    margin: 10px 80px 0 80px;
+    background: white;
+}
+
+.LogoPhukien01 {
+    width: 200px;
+    height: 160px;
+    background: white;
+    float: left;
+}
+
+.LogoPhukien01:hover {
+    border: 1px solid #99ccff;
+}
+
+.LogoPhukien02 img {
+    width: 80px;
+    height: 80px;
+    margin: 30px 55px 0px 55px;
+}
+
+.LogoPhukien03 {
+    text-align: center;
+}
+
+.ProductPhukien {
+    width: 1200px;
+    height: 50px;
+    background: #E4E4E4;
+    margin: 10px 80px 0 80px;
+}
+
+.ProductPhukien_1 {
+    margin: 0px 350px 0px 350px;
+    width: 500px;
+    height: 50px;
+    background: #ff0066;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.ProductPhukien_1 p {
+    text-transform: uppercase;
+    margin-left: 30px;
+    font-size: 20px;
+    color: white;
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.ProductPhukien_2 {
+    background: #ff0066;
+    width: 400px;
+    height: 40px;
+    margin: 0px 70px 0px 70px;
+    padding: 15px;
+}
+
+.ProductPhukien01 {
+    border: 2px solid #ff0066;
+    width: 1200px;
+    height: 1000px;
+    margin: 0px 80px 0px 80px;
+    background: white;
+}
+
+.ProductPhukien02 {
+    width: 287px;
+    height: 455px;
+    background: white;
+    border: 1px solid #ddd;
+    float: left;
+    margin: 5.5px;
+}
+
+.ProductPhukien03 img {
+    width: 286px;
+    height: 300px;
+}
+
+.ProductPhukien04 {
+    background: white;
+    height: 100px;
+    margin-top: 0px;
+}
+
+.ProductPhukien04 p {
+    margin: 10px 0px 0px 10px;
+}
+
+.ProductPhukien04 .pricePhukien {
+    color: red;
+}
+
+.ProductPhukien05 {
+    background: white;
+    height: 40px;
+}
+
+.ProductPhukien05 p {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #ffcc00;
+    text-align: center;
+    color: #ffcc00;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.ProductPhukien05 p:hover {
+    background: #ffcc80;
+    color: white;
+}
+
+.ProductPhukien05_Detail {
+    margin-left: 70px;
+}
+
+.ArrayLaptop .Array2 {
+    height: 50px;
+}
+
+.Array2 tr td {
+    width: 200px;
+}
+
+.ArrayLaptop .Array2 a:link {
+    text-decoration: none;
+}
+
+.ProductPhukien05_Detail a:link {
+    text-decoration: none;
+}
+
+.ProductPhukien02 a:link {
+    text-decoration: none;
+}
+
+.logoBranchLaptop1 {
+    margin: 10px 80px 0px 80px;
+    width: 1200px;
+}
+
+.logoBranchLaptop1 img {
+    width: 198px;
+    height: 30px;
+}
+
+.ArrayLaptop {
+    width: 1200px;
+    margin: 10px 80px 0px 80px;
+    background: white;
+}
+
+.PriceLaptop .priceLaptop1 a:link {
+    text-decoration: none;
+}
+
+.ProductLaptop3 .Text {
+    color: #1a0d00;
+}
+
+.ProductLapTop .ProductLaptop1 a:link {
+    text-decoration: none;
+}
+
+.ProductPhone3 {
+    color: #1a0d00;
+}
+
+.ProductPhone .ProductPhone1 a:link {
+    text-decoration: none;
+}
+
+.Array .Array1 a:link {
+    text-decoration: none;
+}
+
+.DetailProduct {
+    max-width: 1200px;
+    height: 40px;
+    margin: 40px 80px 0px 80px;
+    background: white;
+    border-bottom: 1px solid #ffb3b3;
+ 
+}
+
+.DetailProduct01 h4 {
+    margin-left: 10px;
+}
+
+.DetailProduct02 {
+    max-width: 1200px;
+    height: 800px;
+    background: white;
+    margin: 0px 80px 0px 80px;
+}
+
+.DetailProduct03 {
+    width: 400px;
+    height: 800px;
+    background: white;
+    float: left;
+}
+
+.DetailProduct13 img {
+    width: 380px;
+    height: 480px;
+    margin: 20px;
+}
+
+.PriceDetail {
+    font-size: 23px;
+    color: red;
+}
+
+.PriceDetail1 {
+    color: red;
+    font-size: 15px;
+}
+
+.PriceLow {
+    font-size: 20px;
+    margin-top: 3px;
+    text-decoration: line-through;
+    margin-left: 10px;
+    color: #c2c2a3;
+}
+
+.Tragop {
+    border: 1px solid yellow;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 15px;
+    background: #ff6600;
+}
+
+.DetailProduct04 {
+    margin: 10px 0px 0px;
+}
+
+.DetailProduct15 {
+    float: left;
+    margin-left: 5px;
+}
+
+.DetailProduct05 {
+    width: 400px;
+    height: 40px;
+    background: white;
+}
+
+.GB {
+    margin-left: 5px;
+}
+
+.DetailProduct16 {
+    float: left;
+    margin-left: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.DetailProduct06 {
+    width: 400px;
+    height: 60px;
+    background: white;
+}
+
+.DetailProduct26 {
+    width: 100px;
+    height: 60px;
+    background: white;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 1.19;
+}
+
+.DetailProduct16 a:link {
+    text-decoration: none;
+}
+
+.DetailProduct07 {
+    width: 450px;
+    height: 315px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    background: white;
+}
+
+.DetailProduct17 {
+    width: 440px;
+    height: 25px;
+    background: white;
+}
+
+.DetailProduct17 h5 {
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-top: 15px;
+    color: black;
+    font-size: 15px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+}
+
+.DetailProduct27 {
+    width: 440px;
+    height: 130px;
+    background: white;
+}
+
+.DetailProduct27 p {
+    list-style-type: square;
+}
+
+.DetailProduct37 {
+    width: 440px;
+    height: 140px;
+    background: white;
+}
+
+.DetailProduct47 {
+    width: 430px;
+    height: 120px;
+    background: white;
+    margin-left: 10px;
+    border: 1px solid red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.DetailProduct57 {
+    width: 400px;
+    height: 80px;
+    background: white;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.DetailProduct57 p {
+    list-style-type: square;
+}
+
+.DetailProduct47 p {
+    margin-left: 40px;
+    width: 200px;
+    background: #ff3333;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 490px;
+    color: white;
+}
+
+.DetailProduct08 {
+    width: 450px;
+    height: 120px;
+    background: white;
+}
+
+.DetailProduct18 {
+    width: 450px;
+    ;
+    height: 50px;
+    background: #ff3333;
+    margin-top: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.DetailProduct18 p {
+    color: white;
+}
+
+.DetailProduct28 {
+    width: 450px;
+    height: 50px;
+    background: #0066ff;
+    float: left;
+    margin-top:5px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.DetailProduct28 p {
+    color: white;
+}
+
+.DetailProduct08 a:link {
+    text-decoration: none;
+}
+
+.DetailProduct28 a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.GB {
+    color: black;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.DetailProduct09 {
+    background: white;
+    width: 300px;
+    position: absolute;
+    top: 180px;
+    left: 950px;
+}
+.DetailProduct29 tr:nth-child(even) {
+    background-color: #dddddd;
+    
+}
+
+
+.DetailProduct39 {
+    color: #ff6666;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.DetailProduct19 {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.DetailProduct29 {
+    margin: 10px 0px 0px 0px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.facebook{
+    margin-left:80px;
+}

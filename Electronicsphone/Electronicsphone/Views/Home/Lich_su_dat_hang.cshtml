@@ -1,0 +1,64 @@
+﻿@model Electronicsphone.Models.Order
+@{
+    ViewBag.Title = "Lich_su_dat_hang";
+    Layout = "~/Views/Shared/_Shopping.cshtml";
+}
+
+<h2 style="text-align:center;color:red;font-size:30px;text-transform:uppercase">Lịch sử đơn đặt hàng của bạn</h2>
+<table class="table">
+	<tr>
+		<th>
+			Tên khách hàng
+		</th>
+		<th>
+			Số điện thoại
+		</th>
+		<th>
+			Tổng tiền
+		</th>
+		<th>
+			Địa chỉ
+		</th>
+		<th>
+			Ngày đặt hàng
+		</th>
+
+		<th>
+			Ngày nhận hàng
+		</th>
+		<th>Tình trạng đơn hàng</th>
+		<th></th>
+	</tr>
+
+	
+	<tr>
+		<td>
+			@Html.DisplayFor(modelItem => Model.TenKhachHang)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => Model.SDT)
+		</td>
+		<td>
+			@String.Format("{0:0,0}", Model.TongTien) VND
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => Model.DiaChi)
+		</td>
+		<td>
+			@String.Format("{0:MM/dd/yyyy}", Model.NgayDatHang)
+		</td>
+
+		<td>
+			@String.Format("{0:MM/dd/yyyy}", Model.NgayNhanHang)
+		</td>
+		<td>
+			@Html.DisplayFor(modelItem => Model.MoTa)
+		</td>
+		<td>
+			@Html.ActionLink("Chi tiết", "Chi_tiet_lich_su_don_hang", new { id = Model.Id })
+		</td>
+
+	</tr>
+	
+
+</table>

@@ -1,0 +1,89 @@
+﻿@model Electronicsphone.Models.Order
+
+@{
+	ViewBag.Title = "ChiTietDatHang";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center; color:red">Thông tin chi tiết về đơn hàng</h2>
+
+<div>
+	<h4 style="color:cornflowerblue">Đơn hàng số: @Html.DisplayFor(model => model.Id)</h4>
+	<hr />
+	<dl class="dl-horizontal" style="font-size:18px">
+		<dt>
+			@Html.DisplayNameFor(model => model.TenKhachHang)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.TenKhachHang)
+		</dd>
+		<dt>
+			Địa chỉ :
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.DiaChi)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.SDT)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.SDT)
+		</dd>
+		<dt>
+			@Html.DisplayNameFor(model => model.NgayDatHang)
+		</dt>
+
+		<dd>
+			@String.Format("{0:dd/MM/yyyy}", Model.NgayDatHang)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.TongTien)
+		</dt>
+
+		<dd>
+		
+			@String.Format("{0:0,0}",Model.OrderDetails.Sum(x=>x.GiaHienTai))
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.NgayNhanHang)
+		</dt>
+
+		<dd>
+			@String.Format("{0:dd/MM/yyyy}", Model.NgayNhanHang)
+		</dd>
+		
+	</dl>
+</div>
+<table class="table">
+	<tr>
+		<th>Tên sản phẩm</th>
+		<th>Ảnh</th>
+		<th>Số lượng</th>
+
+		<th>Đơn giá</th>
+
+	</tr>
+	@foreach (var item in Model.OrderDetails)
+	{
+		<tr>
+			<td>@item.Product.Tensp</td>
+			<td>
+				<img src="@item.Product.HinhAnh" width="100px" />
+			</td>
+			<td>@item.Soluong</td>
+			<td>@String.Format("{0:0,0}",item.GiaHienTai)</td>
+		</tr>
+
+	}
+</table>
+
+<p>
+	@Html.ActionLink("Quay lại Index", "Index")
+</p>
+
+

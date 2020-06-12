@@ -1,0 +1,122 @@
+﻿@model Electronicsphone.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+	<h3 style="color:red">Chắc chắn bạn muốn xóa sản phẩm này chứ ?</h3>
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+       
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tensp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+			<img src="@Model.HinhAnh" alt="Image" width="120" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manhinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manhinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeDieuHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeDieuHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoNhoTrong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoNhoTrong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DungLuongPin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DungLuongPin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CameraTruoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CameraTruoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CameraSau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CameraSau)
+        </dd>
+
+       
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

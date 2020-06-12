@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>them</title>
+	<link rel="stylesheet" href="~/Content/css/AddProduct.css" />
+</head>
+<body>
+	<div class="highlight">
+		<h2>chọn loại sản phẩm muốn thêm vào cửa hàng</h2>
+	</div>
+
+
+	<div class="Product1">
+		<nav>
+			<ul class="Product2">
+				<li>@Html.ActionLink("laptop", "create", "Laptop")</li>
+				<li>@Html.ActionLink("Điện thoại", "create", "Products")</li>
+				<li>@Html.ActionLink("Phụ kiện", "Index", "Home")</li>
+			</ul>
+		</nav>
+	</div>
+	@RenderBody()
+
+</body>
+</html>

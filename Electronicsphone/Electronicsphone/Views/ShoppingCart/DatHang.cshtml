@@ -1,0 +1,76 @@
+﻿@model Electronicsphone.Models.Order
+
+@{
+	ViewBag.Title = "DatHang";
+	Layout = "~/Views/Shared/_Shopping.cshtml";
+}
+
+<<h1 style="text-align:center; color:red;">Thông tin đặt hàng</h1>
+<table style="margin-left:400px;font-size:20px; width:500px">
+	@using (Html.BeginForm())
+	{
+
+		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.NgayDatHang)
+			</td>
+			<td style="color:red;">
+				@DateTime.Now.ToShortDateString()
+			</td>
+		</tr>
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.TongTien)
+			</td>
+			<td>
+				@Html.EditorFor(model => model.TongTien, new { htmlAttributes = new { @class = "form-control" } })
+				<p style="color:red">Nhập đúng với số tiền :@ViewBag.TongTien </p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.NgayNhanHang)
+			</td>
+			<td>
+				<input type="date" name="NgayNhanHang" />
+			</td>
+		</tr>
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.TenKhachHang)
+			<td>
+				@Html.EditorFor(model => model.TenKhachHang, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.TenKhachHang, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+		<tr>
+			<td>
+				@Html.LabelFor(model => model.SDT)
+			<td>
+				@Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Địa chỉ
+			<td>
+				@Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+			</td>
+		</tr>
+		
+		<tr style="color:red;">
+			<td></td>
+			<td>
+				<input type="submit" value="Đồng ý đặt hàng" />
+			</td>
+		</tr>
+	}
+</table>
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
+
+

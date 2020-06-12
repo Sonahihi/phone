@@ -1,0 +1,54 @@
+﻿@using Electronicsphone.Models
+@model List<Cart>
+@{
+	ViewBag.Title = "GioHang";
+	Layout = "~/Views/Shared/_Shopping.cshtml";
+}
+
+<h1 style="text-align:center; color:red;">Giỏ hàng</h1>
+<table align="center" border="1" style="font-size:20px;">
+	<tr style="text-align:center;font-weight:bold">
+		<td>Tên sản phẩm</td>
+		<td>Ảnh</td>
+		<td>Số lượng</td>
+		<td>Đơn giá</td>
+		<td>Thành tiền</td>
+		<td>Tác vụ</td>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr style="text-align:center;font-weight:bold;font-size:15px">
+			<td width=200px;>@item.ITenSP</td>
+			<td><img src="@item.IImage" style="width:150px;height:180px"</td>
+			@using (Html.BeginForm("Update", "ShoppingCart", new { @IMaSP =item.IMaSP }))
+			{
+				<td style="width:100px;"><input type="number" name="soluong" value="@item.SoLuong" /></td>
+				<td width=100px;>@String.Format("{0:0,0}", item.DonGia)</td>
+
+				<td width=50px;>@String.Format("{0:0,0}", item.ThanhTien)</td>
+				<td style="padding:15px;">
+					@Html.ActionLink("Xóa", "XoaHang", new { @IMaSP = item.IMaSP })<br />
+					<input type="submit" value="Cập nhật" />
+				</td>
+			}
+
+		</tr>
+	}
+	<tr style="font-weight:bold;text-align:center;color:red">
+		<td colspan="3">Số lượng món : @ViewBag.TongSoLuong</td>
+		<td colspan="4">Tổng tiền : @String.Format("{0:0,0}",@ViewBag.TongTien) VND</td>
+
+	</tr>
+	<tr style="font-weight:bold;text-align:center;color:red">
+		<td colspan="7" style="text-decoration:none;">@Html.ActionLink("Xóa giỏ hàng", "XoaAll", "ShoppingCart")</td>
+	</tr>
+	<tr style="font-weight:bold;text-align:center;color:red">
+		<td colspan="7" style="text-decoration:none">@Html.ActionLink("Đặt Hàng", "DatHang", "ShoppingCart")</td>
+	</tr>
+
+</table>
+<ul>
+	<li style="font-size:20px;text-decoration:none">@Html.ActionLink("Quay lại mennu", "Dienthoai", "Home")</li>
+</ul>
+
+

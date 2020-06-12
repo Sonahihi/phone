@@ -1,0 +1,112 @@
+﻿@using Electronicsphone.Models
+@using PagedList.Mvc
+@model PagedList.PagedList<Product>
+@{
+	ViewBag.Title = "Laptop";
+	Layout = "~/Views/Shared/_Laptop.cshtml";
+}
+<div class="logoBranchLaptop">
+	<table>
+		<tr>
+			@foreach (Electronicsphone.Models.Brand_Product item in ViewBag.Brand)
+			{
+				<td>
+					<a href="@Url.Action("LoaiLaptop","Home",new { id=item.MaNhaSX})" )><img src="@item.HinhNhaSX"></a>
+				</td>
+			}
+			
+		</tr>
+	</table>
+</div>
+<div class="PriceLaptop">
+	<table class="priceLaptop1">
+		<tr>
+			<td>Chọn mức giá:</td>
+			<td>
+
+				@Html.ActionLink("Dưới 5 triệu", "Laptop", new { SortOrder = ViewBag.Price1 })
+			</td>
+			<td>
+
+				@Html.ActionLink("Từ 5-10 triệu", "Laptop", new { SortOrder = ViewBag.Price3 })
+			</td>
+			<td>
+
+				@Html.ActionLink("Từ 10-20 triệu", "Laptop", new { SortOrder = ViewBag.Price4 })
+			</td>
+			<td>
+
+				@Html.ActionLink("Trên 20 triệu", "Laptop", new { SortOrder = ViewBag.Price5 })
+			</td>
+			<td class="LaptopArrange">Sắp xếp theo: </td>
+			<td class="ColorPrice">
+				@Html.ActionLink("Giá cao", "Laptop", new { SortOrder = ViewBag.PriceHigh })
+			</td>
+			<td class="ColorPrice">
+				@Html.ActionLink("Giá thấp", "Laptop", new { SortOrder = ViewBag.PriceLow })
+			</td>
+
+		</tr>
+	</table>
+</div>
+<div class="Ask">
+	<table>
+		<tr>
+			<td>
+				<div class="AskDetail">
+					<a href="#"><img src="~/Content/image/Nhucau.png"></a>
+				</div>
+			</td>
+			<td>
+				<div class="AskDetail">
+					<a href="#"><img src="~/Content/image/NhuCau1.png"></a>
+				</div>
+			</td>
+			<td>
+				<div class="AskDetail">
+					<a href="#"><img src="~/Content/image/Nhucau2.png"></a>
+				</div>
+			</td>
+			<td>
+				<div class="AskDetail">
+					<a href="#"><img src="~/Content/image/Nhucau3.png"></a>
+				</div>
+			</td>
+			<td>
+				<div class="AskDetail">
+					<a href="#"><img src="~/Content/image/Nhucau4.jpg"></a>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="ProductLapTop">
+	@foreach (var item in Model)
+	{
+		<div class="ProductLaptop1">
+			<a href="@Url.Action("Thong_tin_may_tinh","Home",new {id=item.Masp})">
+				<div class="ProductLaptop2">
+					<img src="@item.HinhAnh">
+				</div>
+				<div class="ProductLaptop3">
+					<h5>@item.Tensp</h5>
+					<p class="price">@String.Format("{0:0,0}", item.Gia) VND</p>
+
+				</div>
+			</a>
+		</div>
+
+	}
+
+</div>
+<div class="page_1" style="width:max;height:60px;background:#E4E4E4;margin-left:80px;margin-right:80px;color:red;">
+	<div class="page_2" style="text-align:center;">
+		Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+		<div class="page_3" style="width:100px;height:20px;background:#E4E4E4;margin-left:550px;">
+			@Html.PagedListPager(Model, page => Url.Action("Laptop",
+		new { page = page }))
+		</div>
+
+	</div>
+</div>
+

@@ -1,0 +1,80 @@
+﻿@model Electronicsphone.Models.Brand_Product
+@{
+	ViewBag.Title = "LoaiDienThoai";
+	Layout = "~/Views/Shared/_Phone.cshtml";
+}
+
+	<div class="logoBranch">
+<table>
+	<tr>
+		@foreach (Electronicsphone.Models.Brand_Product item in ViewBag.Brand)
+		{
+			<td>
+				<a href="@Url.Action("LoaiDienThoai","Home",new { id=item.MaNhaSX})" )><img src="@item.HinhNhaSX"></a>
+			</td>
+		}
+
+</table>
+</div>
+<div class="Array">
+	<table class="Array1">
+		<tr>
+			<td>Chọn mức giá:</td>
+			<td>
+				@Html.ActionLink("Dưới 2 triệu", "Dienthoai", new { SortOrder = ViewBag.Price1 })
+
+			</td>
+			<td>
+
+				@Html.ActionLink("Từ 2-4 triệu", "Dienthoai", new { SortOrder = ViewBag.Price2 })
+			</td>
+			<td>
+
+				@Html.ActionLink("Từ 4-7 triệu", "Dienthoai", new { SortOrder = ViewBag.Price3 })
+			</td>
+
+			<td>
+
+				@Html.ActionLink("Từ 7-13 triệu", "Dienthoai", new { SortOrder = ViewBag.Price4 })
+			</td>
+
+			<td>
+
+				@Html.ActionLink("Trên 13 triệu", "Dienthoai", new { SortOrder = ViewBag.Price5 })
+			</td>
+
+			<td class="Arrange">Sắp xếp theo: </td>
+			<div class="ArrangeLaptop">
+				<td class="ColorPrice1">
+					@Html.ActionLink("Giá cao", "Dienthoai", new { SortOrder = ViewBag.PriceHigh })
+				</td>
+				<td class="ColorPrice1">
+					@Html.ActionLink("Giá thấp", "Dienthoai", new { SortOrder = ViewBag.PriceLow })
+
+				</td>
+			</div>
+
+		</tr>
+	</table>
+</div>
+<div class="ProductPhone">
+
+	@foreach (var item in Model.Products)
+	{
+		<div class="ProductPhone1">
+			<a href="@Url.Action("Thong_tin_san_pham","Home",new { id=item.Masp})">
+				<div class="ProductPhone2">
+					<img src="@item.HinhAnh">
+				</div>
+				<div class="ProductPhone3">
+					<h6>@item.Tensp</h6>
+					<p class="price1">@String.Format("{0:0,0}", item.Gia) VND</p>
+				</div>
+			</a>
+		</div>
+
+	}
+
+
+</div>
+

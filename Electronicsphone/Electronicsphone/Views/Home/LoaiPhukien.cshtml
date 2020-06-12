@@ -1,0 +1,96 @@
+﻿@model Electronicsphone.Models.Kind_PhuKien
+@{
+	ViewBag.Title = "LoaiPhukien";
+	Layout = "~/Views/Shared/_Phukien.cshtml";
+}
+
+<div class="LogoPhukien">
+	@foreach (Electronicsphone.Models.Kind_PhuKien item in ViewBag.Phukien)
+	{
+		<a href="@Url.Action("LoaiPhukien","Home",new { id=item.Id_Kind})" )>
+			<div class="LogoPhukien01">
+
+				<div class="LogoPhukien02">
+					<img src="@item.Kind_Phukien_Image">
+				</div>
+				<div class="LogoPhukien03">
+					<p>@item.Kind_Name</p>
+				</div>
+
+			</div>
+		</a>
+	}
+
+</div>
+<div class="logoBranchLaptop1">
+	<table>
+		<tr>
+			<td>
+				<a href="#"><img src="~/Content/image/LogoPineSaver.jpg"></a>
+			</td>
+			<td class="LogoDetail">
+				<a href="#"><img src="~/Content/image/LogoLoaAnker.jpg"></a>
+			</td>
+			<td>
+				<a href="#"><img src="~/Content/image/LogoLoaAUKEY.jpg"></a>
+			</td>
+			<td class="LogoDetail">
+				<a href="#"><img src="~/Content/image/LogoLoaEnergizer.jpg"></a>
+			</td>
+			<td class="LogoDetail">
+				<a href="#"><img src="~/Content/image/LogoLoaSony.jpg"></a>
+			</td>
+			<td class="LogoDetail">
+				<a href="#"><img src="~/Content/image/LogoPinXmobile.jpg"></a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="ArrayLaptop">
+	<table class="Array2">
+		<tr>
+			<td>Chọn mức giá:</td>
+			<td>
+
+				@Html.ActionLink("Dưới 300.000đ", "Phukien", new { SortOrder = ViewBag.Priceh })
+			</td>
+			<td>
+
+				@Html.ActionLink("Từ 300.000đ-500.000đ", "Phukien", new { SortOrder = ViewBag.Price3 })
+			</td>
+
+			<td>
+
+				@Html.ActionLink("Trên 500.000đ", "Phukien", new { SortOrder = ViewBag.Price4 })
+			</td>
+
+		</tr>
+	</table>
+</div>
+<div class="ProductPhukien01">
+
+	@foreach (var item in Model.Products)
+	{
+		<div class="ProductPhukien02">
+			<a href="@Url.Action("Thong_tin_phu_kien","Home",new { id=item.Masp})">
+
+				<div class="ProductPhukien03">
+					<img src="@item.HinhAnh">
+				</div>
+				<div class="ProductPhukien04">
+					<p class="pricePhukien">@String.Format("{0:0,0}", item.Gia)đ</p>
+
+					<p>@item.Tensp</p>
+				</div>
+			</a>
+			<div class="ProductPhukien05">
+				<div class="ProductPhukien05_Detail">
+					<a href="@Url.Action("Thong_tin_phu_kien","Home",new { id=item.Masp})">
+						<p>Chi tiết</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	}
+
+</div>

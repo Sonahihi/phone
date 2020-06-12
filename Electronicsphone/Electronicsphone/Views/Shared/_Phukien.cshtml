@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Phu kien</title>
+	<link href="~/Content/css/Style.css" type="text/css" rel="stylesheet">
+	<link href="~/Content/css/Fastion.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<script src="~/Content/js/big.js" type="text/javascript"></script>
+	<script src="~/Content/js/long.js" type="text/javascript"></script>
+	<script src="~/Content/js/small.js" type="text/javascript"></script>
+
+	<header>
+		<nav class="navbar navbar-light" style="background-color: red;">
+			<nav class="navbar navbar-light bg-light justify-content-between" style="margin-left: 65px;">
+				<a href="/Sales_MVC/Home" class="navbar-brand">Electronics Mountain</a>
+				<form class="form-inline">
+					<input class="form-control mr-sm-2" type="submit" placeholder="Search" aria-label="Search" value="Search">
+					@Html.TextBox("SearchString")
+				</form>
+			</nav>
+			<div id="top-header" style="margin-right: 80px;background-color: red;">
+				<nav>
+					<ul class="active">
+						<li>
+							@Html.ActionLink("Điện thoại", "Dienthoai", "Home")
+						</li>
+						<li>
+							@Html.ActionLink("Máy tính", "Laptop", "Home")
+						</li>
+						<li>
+							@Html.ActionLink("Phụ kiện", "PhuKien", "Home")
+						</li>
+						<li>
+							@Html.ActionLink("Giỏ hàng", "Giohang", "ShoppingCart")
+						</li>
+						<li>
+							@Html.Partial("_LoginPartial")
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</nav>
+		<div class="Show">
+			<div class="slider-holder1">
+				<span id="slider-image-1"></span>
+				<span id="slider-image-2"></span>
+				<span id="slider-image-3"></span>
+				<div class="image-holder1">
+					<a href="#"><img src="~/Content/image/Phukien1.png" class="slider-image" /></a>
+					<a href="#"><img src="~/Content/image/Phukien2.png" class="slider-image" /></a>
+					<a href="#"><img src="~/Content/image/Phukien3.png" class="slider-image" /></a>
+				</div>
+				<div class="button-holder1">
+					<a href="#slider-image-1" class="slider-change"></a>
+					<a href="#slider-image-2" class="slider-change"></a>
+					<a href="#slider-image-3" class="slider-change"></a>
+				</div>
+			</div>
+			<div class="Show1">
+				<div class="ShowDetail">
+					<a href="#"><img src="~/Content/image/Phukien4.png"></a><br>
+					<a href="#"><img src="~/Content/image/Phukien5.png"></a>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		@RenderBody()
+
+		<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+		<div class="elfsight-app-a9959b57-feda-471d-b2d9-bb55c3521e3b"></div>
+		<div class="Shipper">
+			<table>
+				<tr>
+					<td class="Shipper1">
+						<div class="ShipperDetail1">Giao hàng hỏa tốc<br> trong1 giờ</div>
+					</td>
+					<td class="Shipper3">Thanh toán linh hoạt: tiền<br>mặt, visa/master,trả góp</td>
+					<td class="Shipper3">Trải nghiệm sản phẩm tại nhà</td>
+					<td class="Shipper3">Lỗi đổi tại nhà trong 1 ngày</td>
+					<td class="Shipper2">
+						<div class="ShipperDetail2">
+							Hỗ trợ suốt thời gian sử dụng.<br> Hotline: 1800.1763
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<footer>
+			<div class="footer_1">
+				<table id="footer_2">
+					<tr>
+						<td>
+							<div class="footer_3">
+								<p>Tìm hiểu về mua trả góp</p>
+								<p>Chính sách bảo hành</p>
+								<p>Chính sách đổi trả</p>
+								<p>Giao hàng và thanh toán</p>
+							</div>
+
+						</td>
+						<td>
+							<div class="footer_4">
+								<p>Giới thiệu công ty</p>
+								<p>Tuyển dụng</p>
+								<p>Gửi góp ý, khiếu nại</p>
+								<p>Tìm siêu thị</p>
+							</div>
+
+						</td>
+						<td>
+
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.381920919195!2d106.76442611411704!3d10.858528560643732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175279c44b5711f%3A0xf06fc9808df6166!2zMjEgxJDGsOG7nW5nIHPhu5EgNywgUGjGsOG7nW5nIExpbmggVHJ1bmcsIFRo4bunIMSQ4bupYywgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1590847244630!5m2!1sen!2s"
+									width="440" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</td>
+						<td>
+							<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBookingcar-S%C6%A0N-T%C3%99NG-1104588496367841&tabs=timeline&width=340&height=100&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="150" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+						</td>
+
+					</tr>
+				</table>
+			</div>
+			<div class="detail">
+				<p>
+					© 2019. Công ty cổ phần Phone Mountain. GPDKKD: 0346135911 do sở KH & ĐT TP.HCM cấp ngày 02/01/2007. Địa chỉ: 128 Điên Biên Phủ, P. Tân Định, Q.Bình Thạnh, TP.Hồ Chí Minh. Điện thoại: 18001060. Email: cskh@phonemountain.com. Chịu trách nhiệm nội dung: Lê Đình Sơn.<br> Xem chính sách sử dụng web
+				</p>
+			</div>
+		</footer>
+	</header>
+</body>
+</html>

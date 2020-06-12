@@ -1,0 +1,44 @@
+﻿body {
+	background: #E4E4E4;
+}
+.Product1 {
+	background: #00ff90;
+	margin: 0px 200px 100px 200px;
+	
+	text-transform: uppercase;
+	font-size: 30px;
+	
+}
+.Product2  a:link {
+	text-decoration: none;
+}
+.Product2 a:visited {
+	color: black;
+}
+
+/* mouse over link */
+.Product2 a:hover {
+	color: aquamarine	;
+}
+
+/* selected link */
+.Product2 a:active {
+	color: blue;
+}
+.Product2 li {
+	float: left;
+	padding: 10px;
+	list-style-type: none;
+	border: solid 1px #00ff90;
+	margin: 70px;
+	background: #00ff90;
+	font-family:'Microsoft Tai Le';
+	border-radius:5%;
+	
+}
+.highlight{
+	text-transform:uppercase;
+	font-size:20px;
+	color:cornflowerblue;
+	text-align:center;
+}

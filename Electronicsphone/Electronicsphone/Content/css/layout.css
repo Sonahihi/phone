@@ -1,0 +1,181 @@
+body {
+    background: white;
+}
+
+.Align {
+    margin-left: 360px;
+    text-transform: uppercase;
+    color: aqua;
+}
+
+.control {
+    width: 200px;
+    height: 30px;
+    background: azure;
+}
+
+.Cach {
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.Cach1 {
+    font-size: 18px;
+    color: cornflowerblue;
+}
+
+.Cach2 {
+    width: 700px;
+    height: 40px;
+}
+
+.Dieu {
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    color: cornsilk;
+    border-radius: 5px;
+    background: dodgerblue;
+    ;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.Phone h3 {
+    color: red;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Imagephone img {
+    width: 100px;
+    height: 150px;
+}
+
+.Imagephone1 img {
+    width: 80px;
+    height: 120px;
+}
+
+.colorphone {
+    color: blue;
+}
+
+.colorphone1 {
+    color: red;
+    text-align: center;
+}
+
+.Addnew {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.delete {
+    text-align: center;
+}
+
+.delete a:link {
+    text-decoration: none;
+}
+
+.bigDelete {
+    background: navajowhite;
+    max-width: 1000px;
+    height: 450px;
+    margin-left: 180px;
+    margin-bottom: 50px;
+}
+
+.smallDelete1 {
+    float: left;
+}
+
+.smallDelete1 img {
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.smallDelete2 {
+    width: 500px;
+    height: 400px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.smallDelete3 {
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 40px;
+}
+
+.smallDelete4 {
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 60px;
+    text-align: center;
+    border: skyblue 1px solid;
+    margin-right: 40px;
+    background: skyblue;
+}
+
+.smallDelete1 a:link {
+    text-decoration: none;
+}
+
+.Imagelaptop img {
+    width: 200px;
+    height: 200px;
+}
+
+.Update {
+    width: 80px;
+    height: auto;
+    background: aquamarine;
+}
+
+.User {
+    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-left: 180px;
+    margin-right: 200px;
+    width: 1000px;
+    height: 500px;
+}
+
+.User1 {
+    background: white;
+    margin-left: 190px;
+    width: 600px;
+}
+
+.User2 {
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.User3 {
+    margin-left: 250px;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background: orange;
+    color: papayawhip;
+}

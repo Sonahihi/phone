@@ -1,0 +1,123 @@
+﻿@model Electronicsphone.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="color:red">Chi tiết sản phẩm</h2>
+
+<div>
+    <h4>Điện thoại</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand_Product.TenNhaSX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand_Product.TenNhaSX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tensp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Soluong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+           <img src="@Model.HinhAnh" width="120px" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manhinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manhinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeDieuHanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeDieuHanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoNhoTrong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoNhoTrong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DungLuongPin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DungLuongPin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CameraTruoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CameraTruoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CameraSau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CameraSau)
+        </dd>
+ 
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Masp }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

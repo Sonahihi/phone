@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Electronicsphone.Models.Product>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="text-align:center; color:red">Sản phẩm máy tính</h2>
+
+<p>
+	@Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm())
+{
+	<p>
+		Tên sản phẩm: @Html.TextBox("SearchString")  <input type="submit" value="Tìm kiếm" />
+	</p>
+}
+<table class="table">
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.Tensp)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Gia)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Soluong)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.HinhAnh)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Manhinh)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.HeDieuHanh)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.CPU)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.RAM)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.OCung)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.CardManHinh)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.CongKetNoi)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.KichThuoc)
+		</th>
+		<th></th>
+	</tr>
+
+	@foreach (var item in Model)
+	{
+		<tr>
+
+			<td>
+				@Html.DisplayFor(modelItem => item.Tensp)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Gia)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Soluong)
+			</td>
+			<td>
+				<img src="@item.HinhAnh" alt="Image" width="120" />
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Manhinh)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.HeDieuHanh)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CPU)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.RAM)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.OCung)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CardManHinh)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.CongKetNoi)
+			</td>
+
+			<td>
+				@Html.DisplayFor(modelItem => item.KichThuoc)
+			</td>
+
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { id = item.Masp }) |
+				@Html.ActionLink("Details", "Details", new { id = item.Masp }) |
+				@Html.ActionLink("Delete", "Delete", new { id = item.Masp })
+			</td>
+		</tr>
+	}
+
+</table>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Electronicsphone.Models.Kind_Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLoaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhLoai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenLoaiSP)
+        </td>
+        <td>
+			<img src="@item.HinhLoai" width="100px" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaLoaiSP }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaLoaiSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaLoaiSP })
+        </td>
+    </tr>
+}
+
+</table>
